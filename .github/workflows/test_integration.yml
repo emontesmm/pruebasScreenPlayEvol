@@ -26,7 +26,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2-
 
-      - if: ${{github.event_name=='workflow_dispatch' && github.event.pull_request.base.ref=='master'}}
+      - if: ${{github.event_name=='workflow_dispatch'}}
         name: Test Integration By Tags
         run: mvn clean verify -Dcucumber.filter.tags=${{github.event.inputs.createUser}}
 
