@@ -30,7 +30,7 @@ jobs:
         run: mvn clean verify -Dcucumber.filter.tags=${{github.event.inputs.createUser}}
 
       - name: Upload Results
-        uses: actions/upload-artifacts@v2
+        uses: actions/upload-artifact@v2
         with:
           name: Serenity Report
           path: |
