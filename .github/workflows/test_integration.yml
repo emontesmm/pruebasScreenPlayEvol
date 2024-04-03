@@ -6,7 +6,7 @@ on:
       createUser:
         description: 'Gestion Usuario'
         required: true
-        default: @create
+        default: '@create'
 
 jobs:
   build:
